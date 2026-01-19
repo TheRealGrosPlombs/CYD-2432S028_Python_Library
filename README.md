@@ -12,6 +12,9 @@ Cheap Yellow Display Board 2432S028 python code to manage LCD and touchscreen
 
 #     
 # Introduction  
-![image](/images/componentsV3.png)   
+Touchscreen code is from https://github.com/ilbertt/XPT2046-Python/tree/main
+and is modified to support LCD screen rotation
 
+LCD code is from https://github.com/rdagger/micropython-ili9341/blob/master/ili9341.py
+and is modified to support LCD rotation in touchscreen library
 
