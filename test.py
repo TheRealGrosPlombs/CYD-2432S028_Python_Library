@@ -1,7 +1,4 @@
 import asyncio
-#import aioble
-#import bluetooth
-#import struct
 from machine import Pin, SPI, ADC, idle
 import os
 from time import sleep
