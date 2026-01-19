@@ -69,8 +69,6 @@ def convert_ts_to_LCD(ts_x,ts_y):
 
 def touchscreen_press(tx, ty):
     print(f"ts : X = {tx:3d}, Y = {ty:3d}")
-    #lcd_x, lcd_y = convert_ts_to_LCD(tx, ty)
-    #print(f"lcd: X = {lcd_x:3d}, Y = {lcd_y:3d}")
     touch_point = (tx,ty)
     for name, area in buttons.items():
         if is_inside(touch_point, area):
@@ -78,11 +76,7 @@ def touchscreen_press(tx, ty):
 
 # settings for my CYD. x_min, x_max, y_min, y_max are different for each touschscreen...
 # you can print raw_touch() and tap each corner of screen to get your own values.
-# width is the number of lcd pixels int the touschscreen X direction (not LCD orientation)
-# height is the number of pixels in the touchscreen Y direction (not LCD orientation)
-# These height and width should not change even if you change your LCD orientation
 touchscreen = Touch(touchscreen_spi, cs=Pin(33), int_pin=Pin(36), int_handler=touchscreen_press,
-                  width=240, height=320,
                     x_min=138, x_max=1858, y_min=106, y_max=1848, lcd=display)
 
 
